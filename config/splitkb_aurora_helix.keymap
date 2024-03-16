@@ -33,48 +33,51 @@ As such, those are in use within the default layer at this time.*/
               compatible = "zmk,keymap";
 
               default_layer {
+                     // Default layer for general typing and programming shortcuts
                      // ---------------------------------------------------------------------------------------------------------------------------------
-                     // | GRAVE  |   1    |   2    |   3    |   4    |   5    |                                      |   6    |   7    |   8    |   9    |   0    |  DEL   |
-                     // |  TAB   |   Q    |   W    |   E    |   R    |   T    |                                      |   Y    |   U    |   I    |   O    |   P    |  BSPC  |
-                     // |  CTRL  |   A    |   S    |   D    |   F    |   G    |                                      |   H    |   J    |   K    |   L    |   ;    |   '    |
-                     // |  SHIFT |   Z    |   X    |   C    |   V    |   B    |  LBKT  |                    |  RBKT  |   N    |   M    |   ,    |   .    |   /    |  RET   |
-                     // | ADJUST |  ESC   |  ALT   |  LGUI  | EISUU  | LOWER  | SPACE  |                    |  SPACE | RAISE  |  KANA  |  LEFT  |  DOWN  |  UP    |  RIGHT |
+                     // | ESC  |   1   |   2   |   3   |   4   |   5   |                                      |   6   |   7   |   8   |   9   |   0   |  DEL  |
+                     // | TAB  |   Q   |   W   |   E   |   R   |   T   |                                      |   Y   |   U   |   I   |   O   |   P   | BSPC  |
+                     // | CTRL |   A   |   S   |   D   |   F   |   G   |                                      |   H   |   J   |   K   |   L   |  ;   |   '   |
+                     // | SHFT |   Z   |   X   |   C   |   V   |   B   | trans |                    | trans |   N   |   M   |   ,   |   .   |   /   |  RET  |
+                     // |ADJUST|  ALT  |  GUI  | LANG2 | trans | Lower | SPACE |             | SPACE | Raise | LANG1 | LEFT  | DOWN  |  UP  | RIGHT |
                      bindings = <
-                     &kp GRAVE  &kp N1  &kp N2   &kp N3   &kp N4    &kp N5                               &kp N6    &kp N7    &kp N8    &kp N9     &kp N0    &kp DEL
-                     &kp TAB    &kp Q   &kp W    &kp E    &kp R     &kp T                                &kp Y     &kp U     &kp I     &kp O      &kp P     &kp BSPC
-                     &kp LCTRL  &kp A   &kp S    &kp D    &kp F     &kp G                                &kp H     &kp J     &kp K     &kp L      &kp SEMI  &kp SQT
-                     &kp LSHFT  &kp Z   &kp X    &kp C    &kp V     &kp B     &kp LBKT         &kp RBKT  &kp N     &kp M     &kp COMMA &kp PERIOD &kp SLASH &kp RET
-                     &mo ADJUST &kp ESC &kp LALT &kp LGUI &kp LANG2 &mo LOWER &kp SPACE        &kp SPACE &mo RAISE &kp LANG1 &kp LEFT  &kp DOWN   &kp UP    &kp RIGHT
+                     &kp ESC    &kp N1    &kp N2    &kp N3    &kp N4     &kp N5                                 &kp N6     &kp N7    &kp N8    &kp N9      &kp N0     &kp DEL
+                     &kp TAB    &kp Q     &kp W     &kp E     &kp R      &kp T                                 &kp Y      &kp U     &kp I     &kp O       &kp P      &kp BSPC
+                     &kp LCTRL  &kp A     &kp S     &kp D     &kp F      &kp G                                 &kp H      &kp J     &kp K     &kp L       &kp SEMI   &kp SQT
+                     &kp LSHFT  &kp Z     &kp X     &kp C     &kp V      &kp B      &trans          &trans &kp N      &kp M     &kp COMMA &kp PERIOD  &kp SLASH  &kp RET
+                     &mo ADJUST &kp LALT  &kp LGUI  &kp LANG2 &trans  &mo LOWER  &kpSPACE        &kp SPACE  &mo RAISE  &kp LANG1 &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT
                      >;
               };
               lower_layer {
+                     // Layer for programming symbols and shortcuts
                      // ---------------------------------------------------------------------------------------------------------------------------------
                      // |      |      |      |      |      |      |                                  |      |      |      |      |      |      |
-                     // |  ~   |  !   |  @   |  #   |  $   |  %   |                                  |  ^   |  &   |  *   |  (   |  )   |      |
-                     // |      |      |      |      |      |      |                                  |      |  _   |  +   |  {   |  }   | PIPE |
-                     // |      |      |      |      |      |      |  (   |                    |  )   |      |      |      | HOME | END  |      |
+                     // |      |  ~   |  !   |  @   |  #   |  $   |                                  |  %   |  ^   |  &   |  *   |  (   |  )   |
+                     // |      |  _   |  +   |  {   |  }   |  |   |                                  |  [   |  ]   |  <   |  >   |  :   |  "   |
+                     // |      |  <   |  >   |  =   |  &   |  |   | (trans) |                | (trans) |  \   |  ?   |      |      |      |      |
                      // |      |      |      |      |      |      |      |                    |      |      |      |      |      |      |      |
                      bindings = <
-                     &trans    &trans   &trans &trans   &trans   &trans                             &trans    &trans    &trans    &trans   &trans   &trans
-                     &kp TILDE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                          &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &trans
-                     &trans    &trans   &trans &trans   &trans   &trans                             &trans    &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE
-                     &trans    &trans   &trans &trans   &trans   &trans    &kp LPAR        &kp RPAR &trans    &trans    &trans    &kp HOME &kp END  &trans
-                     &trans    &trans   &trans &trans   &trans   &trans    &trans          &kp QMARK   &trans    &trans    &trans    &trans   &trans   &trans
+                     &trans     &trans    &trans    &trans    &trans    &trans                                &trans     &trans    &trans    &trans     &trans     &trans
+                     &trans     &kp TILDE &kp EXCL  &kp AT    &kp HASH  &kp DLLR                             &kp PRCNT  &kp CARET &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR
+                     &trans     &kp UNDER &kp PLUS  &kp LCURL &kp RCURL &kp PIPE                             &kp LBKT   &kp RBKT  &kp LCBR  &kp RCBR   &kp COLON  &kp DQT
+                     &trans     &kp LT    &kp GT    &kp EQL   &kp AMP   &kp PIPE    &trans         &trans   &kp BSLH   &kp QUEST &trans    &trans     &trans     &trans
+                     &trans     &trans    &trans    &trans    &trans    &trans      &trans         &trans   &trans     &trans    &trans    &trans     &trans     &trans
                      >;
               };
               raise_layer {
+                     // Function keys, additional navigation, and media controls
                      // ---------------------------------------------------------------------------------------------------------------------------------
                      // |       |       |       |       |       |       |                                    |       |       |       |       |       |       |
-                     // |   `   |   1   |   2   |   3   |   4   |   5   |                                    |   6   |   7   |   8   |   9   |   0   |  DEL  |
-                     // |       |  F1   |  F2   |  F3   |  F4   |  F5   |                                    |  F6   |   -   |   =   |   [   |   ]   |   \   |
-                     // |       |  F7   |  F8   |  F9   |  F10  |  F11  |       |                    |       |  F12  |       | PSCRN | PG_DN | PG_UP |       |
-                     // |       |       |       |       |       |       |       |                    |       |       |       | NEXT  | VOL-  | VOL+  | PLAY  |
+                     // |   `   |   F1  |   F2  |   F3  |   F4  |   F5  |                                    |   F6  |   F7  |   F8  |   F9  |  F10  |  DEL  |
+                     // |       |  F11  |  F12  | PSCRN | SLCK  | PAUSE |                                    |  INS  | HOME  | PG_UP | PG_DN |  END  |       |
+                     // |       |       |       |       |       |       | (trans) |                | (trans) |       | LEFT  | DOWN  |  UP   | RIGHT |       |
+                     // |       |       |       |       |       |       | MUTE    |             | PLAY/PAUSE |       | VOL_D | VOL_U |       |       |       |
                      bindings = <
                      &trans    &trans &trans &trans &trans  &trans                       &trans  &trans    &trans     &trans       &trans       &trans
-                     &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4  &kp N5                       &kp N6  &kp N7    &kp N8     &kp N9       &kp N0       &kp DEL
-                     &trans    &kp F1 &kp F2 &kp F3 &kp F4  &kp F5                       &kp F6  &kp MINUS &kp EQUAL  &kp LBKT     &kp RBKT     &kp BSLH
-                     &trans    &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &trans        &trans &kp F12 &trans    &kp PSCRN  &kp PG_DN    &kp PG_UP    &trans
-                     &trans    &trans &trans &trans &trans  &trans  &trans        &trans &trans  &trans    &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp C_PP
+                     &kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4  &kp F5                       &kp F6  &kp F7    &kp F8     &kp F9       &kp F10      &kp DEL
+                     &trans    &kp F11 &kp F12 &kp PSCRN &kp SLCK  &kp PAUSE            &trans     &kp INS   &kp HOME  &kp PG_UP  &kp PG_DN  &kp END
+                     &trans    &trans &trans &trans &trans &trans     &trans         &trans &trans     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
+                     &trans    &trans &trans &trans &trans  &trans  &kp MUTE        &kp PLAY &trans  &kp VOL_D &kp VOL_U &trans     &trans
                      >;
               };
               adjust_layer {
