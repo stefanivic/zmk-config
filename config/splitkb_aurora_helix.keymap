@@ -32,7 +32,10 @@ As such, those are in use within the default layer at this time.*/
         lock: lock {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_COMMAND &kp LEFT_CONTROL &kp Q>;
+            bindings =
+                <&kp LEFT_COMMAND &kp LEFT_CONTROL &kp Q>,
+                <&macro_press>;
+
             label = "LOCK";
         };
     };
@@ -66,11 +69,11 @@ As such, those are in use within the default layer at this time.*/
             // |      |      |      |      |      |      |      |                    |  ?   |      |      |      |      |      |      |
 
             bindings = <
-&trans  &trans  &trans  &trans          &trans           &trans                    &trans     &trans     &trans          &trans        &trans     &lock
-&trans  &kp LT  &kp GT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans                    &kp UNDER  &kp MINUS  &kp PLUS        &kp EQUAL     &trans     &trans
-&trans  &trans  &trans  &trans          &trans           &trans                    &trans     &trans     &trans          &kp UP_ARROW  &trans     &trans
-&trans  &trans  &trans  &trans          &trans           &trans  &trans    &trans  &trans     &trans     &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans
-&trans  &trans  &trans  &trans          &trans           &trans  &trans    &trans  &trans     &trans     &trans          &trans        &trans     &trans
+&trans  &trans  &trans  &trans            &trans             &trans                    &trans     &trans     &trans          &trans        &trans     &lock
+&trans  &kp LT  &kp GT  &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans                    &kp UNDER  &kp MINUS  &kp PLUS        &kp EQUAL     &trans     &trans
+&trans  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans                    &trans     &trans     &trans          &kp UP_ARROW  &trans     &trans
+&trans  &trans  &trans  &trans            &trans             &trans  &trans    &trans  &trans     &trans     &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans
+&trans  &trans  &trans  &trans            &trans             &trans  &trans    &trans  &trans     &trans     &trans          &trans        &trans     &trans
             >;
         };
 
