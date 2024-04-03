@@ -56,11 +56,11 @@ As such, those are in use within the default layer at this time.*/
             // | ADJUST |  GRAVE   |  ALT   |  LGUI  | EISUU  | LOWER  | BSPC  |                    |  SPACE | RAISE  |  KANA  |  LEFT  |  DOWN  |  UP    |  RIGHT |
 
             bindings = <
-&kp ESC     &kp N1     &kp N2    &kp N3    &kp N4        &kp N5                            &kp N6     &kp N7     &kp N8     &kp N9      &kp N0     &kp DEL
-&kp TAB     &kp Q      &kp W     &kp E     &kp R         &kp T                             &kp Y      &kp U      &kp I      &kp O       &kp P      &trans
-&kp LCTRL   &kp A      &kp S     &kp D     &kp F         &kp G                             &kp H      &kp J      &kp K      &kp L       &kp SEMI   &kp SQT
-&kp LSHFT   &kp Z      &kp X     &kp C     &kp V         &kp B      &trans      &kp A      &kp N      &kp M      &kp COMMA  &kp PERIOD  &kp SLASH  &kp RET
-&mo ADJUST  &kp GRAVE  &kp LALT  &kp LGUI  &kp QUESTION  &mo LOWER  &kp BSPC    &kp SPACE  &mo RAISE  &kp LANG1  &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT
+&kp ESC    &kp N1     &kp N2    &kp N3    &kp N4        &kp N5                         &kp N6  &kp N7     &kp N8     &kp N9      &kp N0     &kp DEL
+&kp TAB    &kp Q      &kp W     &kp E     &kp R         &kp T                          &kp Y   &kp U      &kp I      &kp O       &kp P      &trans
+&kp LCTRL  &kp A      &kp S     &kp D     &kp F         &kp G                          &kp H   &kp J      &kp K      &kp L       &kp SEMI   &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp V         &kp B   &trans      &kp A      &kp N   &kp M      &kp COMMA  &kp PERIOD  &kp SLASH  &kp RET
+&mo 3      &kp GRAVE  &kp LALT  &kp LGUI  &kp QUESTION  &mo 1   &kp BSPC    &kp SPACE  &mo 2   &kp LANG1  &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT
             >;
         };
 
@@ -73,11 +73,11 @@ As such, those are in use within the default layer at this time.*/
             // |      |      |      |      |      |      |      |                    |  ?   |      |      |      |      |      |      |
 
             bindings = <
-&trans  &trans     &trans    &trans            &trans             &trans                    &trans          &trans        &trans     &trans  &trans  &lock
-&trans  &kp LT     &kp GT    &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans                    &trans          &kp UP_ARROW  &trans     &trans  &trans  &trans
-&trans  &kp UNDER  &kp PIPE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans                    &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &trans  &trans  &trans
-&trans  &kp MINUS  &kp PLUS  &kp EQUAL         &trans             &trans  &trans    &trans  &trans          &trans        &trans     &trans  &trans  &trans
-&trans  &trans     &trans    &trans            &trans             &trans  &trans    &trans  &trans          &trans        &trans     &trans  &trans  &trans
+&trans  &trans     &trans    &trans            &trans             &trans                    &trans           &trans        &trans     &trans  &trans  &lock
+&trans  &kp LT     &kp GT    &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans                    &trans           &kp UP_ARROW  &trans     &trans  &trans  &trans
+&trans  &kp UNDER  &kp PIPE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans                    &kp LEFT_ARROW   &kp DOWN      &kp RIGHT  &trans  &trans  &trans
+&trans  &kp MINUS  &kp PLUS  &kp EQUAL         &trans             &trans  &trans    &trans  &jump_word_left  &trans        &trans     &trans  &trans  &trans
+&trans  &trans     &trans    &trans            &trans             &trans  &trans    &trans  &trans           &trans        &trans     &trans  &trans  &trans
             >;
         };
 
