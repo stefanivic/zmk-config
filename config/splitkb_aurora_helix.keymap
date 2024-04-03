@@ -39,7 +39,8 @@ As such, those are in use within the default layer at this time.*/
         jump_word_left: jump_word_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LALT &kp LEFT>;
+            bindings = <&macro_press>, <&kp LALT &kp LEFT>;
+
             label = "JUMP_WORD_LEFT";
         };
     };
@@ -73,11 +74,11 @@ As such, those are in use within the default layer at this time.*/
             // |      |      |      |      |      |      |      |                    |  ?   |      |      |      |      |      |      |
 
             bindings = <
-&trans  &trans     &trans    &trans            &trans             &trans                    &trans           &trans        &trans     &trans  &trans  &lock
-&trans  &kp LT     &kp GT    &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans                    &trans           &kp UP_ARROW  &trans     &trans  &trans  &trans
-&trans  &kp UNDER  &kp PIPE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans                    &kp LEFT_ARROW   &kp DOWN      &kp RIGHT  &trans  &trans  &trans
-&trans  &kp MINUS  &kp PLUS  &kp EQUAL         &trans             &trans  &trans    &trans  &jump_word_left  &trans        &trans     &trans  &trans  &trans
-&trans  &trans     &trans    &trans            &trans             &trans  &trans    &trans  &trans           &trans        &trans     &trans  &trans  &trans
+&trans  &trans     &trans    &trans            &trans             &trans                    &trans          &trans         &trans     &trans  &trans  &kp LG(LS(Q))
+&trans  &kp LT     &kp GT    &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans                    &trans          &kp UP_ARROW   &trans     &trans  &trans  &trans
+&trans  &kp UNDER  &kp PIPE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans                    &kp LEFT_ARROW  &kp DOWN       &kp RIGHT  &trans  &trans  &trans
+&trans  &kp MINUS  &kp PLUS  &kp EQUAL         &trans             &trans  &trans    &trans  &kp LA(LEFT)    &kp LA(RIGHT)  &trans     &trans  &trans  &trans
+&trans  &trans     &trans    &trans            &trans             &trans  &trans    &trans  &trans          &trans         &trans     &trans  &trans  &trans
             >;
         };
 
