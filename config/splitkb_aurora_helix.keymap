@@ -32,11 +32,15 @@ As such, those are in use within the default layer at this time.*/
         lock: lock {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LEFT_COMMAND &kp LEFT_CONTROL &kp Q>,
-                <&macro_press>;
-
+            bindings = <&kp LEFT_COMMAND &kp LEFT_CONTROL &kp Q>;
             label = "LOCK";
+        };
+
+        jump_word_left: jump_word_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LALT &kp LEFT>;
+            label = "JUMP_WORD_LEFT";
         };
     };
 
