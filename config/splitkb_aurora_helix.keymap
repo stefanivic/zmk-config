@@ -63,6 +63,10 @@ As such, those are in use within the default layer at this time.*/
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V         &kp B   &trans      &kp A      &kp N   &kp M      &kp COMMA  &kp PERIOD  &kp SLASH  &kp RET
 &mo 3      &kp GRAVE  &kp LALT  &kp LGUI  &kp QUESTION  &mo 1   &kp BSPC    &kp SPACE  &mo 2   &kp LANG1  &kp LEFT   &kp DOWN    &kp UP     &kp RIGHT
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp 0 0>,
+                <&inc_dec_kp LA(LEFT) LA(RIGHT_ARROW)>;
         };
 
         lower_layer {
